@@ -3,58 +3,61 @@
         <h2>Ingresar nuevo componente:</h2>
     </div>
 </div>
-<form action="">
-<div class="row mt-3">
-    <div class="col-md-6">
-        <div class="d-flex flex-column w-100 input-group-sm mb-3">
-            <p class="mb-1">Título</p>
-            <input type="text" class="form-control" placeholder="{{exampleCompTitle}}" aria-label="Title product input" aria-describedby="inputGroup-sizing-sm">
+<form action="" class="row mt-3 needs-validation">
+    <!-- <div > -->
+        <div class="col-md-6">
+            <div class="d-flex flex-column w-100 input-group-sm mb-3">
+                <p class="mb-1">Título</p>
+                <input type="text" class="form-control" placeholder="{{exampleCompTitle}}"
+                    aria-label="Title product input" aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+
+            <div class="d-flex flex-column w-100 input-group-sm mb-3">
+                <p class="mb-1">Nombre producto</p>
+                <input type="text" class="form-control" placeholder="{{exampleCompProdName}}"
+                    aria-label="Name product input" aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+
+            <div class="d-flex flex-column w-100 input-group-sm mb-3">
+                <p class="mb-1">Cód. Producto</p>
+                <input type="text" class="form-control" placeholder="{{exampleCompCod}}" aria-label="Product code input"
+                    aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+
+            <div class="d-flex flex-column w-100">
+                <p class="mb-1">Tipo</p>
+                <select class="form-select form-select-sm" id="floatingSelect"
+                    aria-label="Product type select dropdown" required>
+                    <option selected disabled>Selecciona una opción...</option>
+                    <option value="{{i + 1}}" *ngFor="let type of examplesCompTypes; let i = index">{{type.prod}}
+                    </option>
+                </select>
+            </div>
         </div>
 
-        <div class="d-flex flex-column w-100 input-group-sm mb-3">
-            <p class="mb-1">Nombre producto</p>
-            <input type="text" class="form-control" placeholder="{{exampleCompProdName}}" aria-label="Name product input" aria-describedby="inputGroup-sizing-sm">
+        <div class="col-md-6">
+
+            <div class="d-flex flex-column w-100 input-group-sm mb-3">
+                <p class="mb-1">Consumo (W)</p>
+                <input type="text" class="form-control" placeholder="{{examplePower}}" aria-label="Power input"
+                    aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+
+            <div class="d-flex flex-column w-100 input-group-sm mb-3">
+                <p class="mb-1">Marca</p>
+                <input type="text" class="form-control" placeholder="{{exampleBrand}}" aria-label="Product brand input"
+                    aria-describedby="inputGroup-sizing-sm" required>
+            </div>
+
+            <div class="d-flex flex-column w-100 input-group-sm mb-3">
+                <p class="mb-1">URL Imagen (<a href="https://postimg.cc" target="_blank">postimg.cc</a>)</p>
+                <input type="text" class="form-control" placeholder="{{exampleUrl}}" aria-label="Product image input"
+                    aria-describedby="inputGroup-sizing-sm">
+            </div>
         </div>
-
-        <div class="d-flex flex-column w-100 input-group-sm mb-3">
-            <p class="mb-1">Cód. Producto</p>
-            <input type="text" class="form-control" placeholder="{{exampleCompCod}}" aria-label="Product code input" aria-describedby="inputGroup-sizing-sm">
+        <div class="col-md-12 d-flex justify-content-end gap-3 vw-100">
+            <button class="btn btn-secondary disabled">Limpiar campos</button>
+            <button class="btn btn-secondary" type="submit">Guardar</button>
         </div>
-
-        <div class="d-flex flex-column w-100">
-            <p class="mb-1">Tipo</p>
-            <select class="form-select select-dropdown-sm" id="floatingSelect" aria-label="Product type select dropdown">
-                <option selected>Selecciona una opción...</option>
-                <option value="{{i + 1}}" *ngFor="let type of examplesCompTypes; let i = index">{{type.prod}}</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="col-md-6">
-
-        <div class="d-flex flex-column w-100 input-group-sm mb-3">
-            <p class="mb-1">Consumo (W)</p>
-            <input type="text" class="form-control" placeholder="{{examplePower}}" aria-label="Power input" aria-describedby="inputGroup-sizing-sm">
-        </div>
-
-        <div class="d-flex flex-column w-100 input-group-sm mb-3">
-            <p class="mb-1">Marca</p>
-            <input type="text" class="form-control" placeholder="{{exampleBrand}}" aria-label="Product brand input" aria-describedby="inputGroup-sizing-sm">
-        </div>
-
-        <div class="d-flex flex-column w-100 input-group-sm mb-3">
-            <p class="mb-1">URL Imagen (<a href="https://postimg.cc" target="_blank">postimg.cc</a>)</p>
-            <input type="text" class="form-control" placeholder="{{exampleUrl}}" aria-label="Product image input" aria-describedby="inputGroup-sizing-sm">
-        </div>
-    </div>
-
-</div>
-
-<div class="row">
-    <div class="col-md-12 d-flex justify-content-end gap-3 vw-100">
-        <button class="btn btn-secondary disabled">Limpiar campos</button>
-        <button class="btn btn-secondary">Guardar</button>
-    </div>
-</div>
-
+    <!-- </div> -->
 </form>

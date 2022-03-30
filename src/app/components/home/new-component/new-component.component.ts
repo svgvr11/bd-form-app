@@ -12,6 +12,7 @@ export class NewComponentComponent implements OnInit {
   exampleCompCod: string = 'Ej: 90LM01K0-B04110';
   exampleBrand: string = 'Ej: Asus';
   examplePower: string = 'Ej: 13';
+  exampleUrl: string = 'Ej: https://postimg.cc/MXccDPsJ';
   examplesCompTypes: any = [
     { prod: 'Aire acondicionado' },
     { prod: 'Computación' },

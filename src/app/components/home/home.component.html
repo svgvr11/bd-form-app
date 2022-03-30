@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">AdderComps v0.1 Alpha</a>
+      <h1 class="fs-5">Welcome to AdderComps <span class="fs-6">v0.1</span></h1>
       <!-- * This is for mobile view (burger menu) -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,13 +8,13 @@
       <div class="collapse navbar-collapse ms-5" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/home">Ingresar componente</a>
+            <a class="nav-link" routerLink="/home" routerLinkActive="active">Ingresar componente</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/home/search">Buscar componentes</a>
+            <a class="nav-link" routerLink="/home/search" routerLinkActive="active">Buscar componentes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" routerLink="/home/assistence">Solicitar asistencia</a>
+            <a class="nav-link disabled" routerLink="/home/assistence" routerLinkActive="active">Solicitar asistencia</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-danger" routerLink="/">Salir</a>
@@ -24,14 +24,14 @@
     </div>
 </nav>
 
-<div class="container">
+<div class="container pt-4 pe-4">
     <router-outlet></router-outlet>
 </div>
 
 <footer class="fixed-bottom">
     <div class="navbar navbar-light bg-light">
         <div class="container-fluid d-flex justify-content-center">
-            <p>KWC 2022</p>
+            <p>KWC © 2022</p>
         </div>
     </div>
 </footer>

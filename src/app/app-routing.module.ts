@@ -5,7 +5,6 @@ import { HomeComponent } from './components/home/home.component';
 import { NewComponentComponent } from './components/home/new-component/new-component.component';
 import { SearchComponentComponent } from './components/home/search-component/search-component.component';
 import { LoginComponent } from './components/login/login.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 const routes: Routes = [
   {

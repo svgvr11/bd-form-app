@@ -8,8 +8,6 @@ import { LoginComponent } from './components/login/login.component';
 import { NewComponentComponent } from './components/home/new-component/new-component.component';
 import { SearchComponentComponent } from './components/home/search-component/search-component.component';
 import { AskAssistanceComponent } from './components/home/ask-assistance/ask-assistance.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +17,6 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     NewComponentComponent,
     SearchComponentComponent,
     AskAssistanceComponent,
-    NavbarComponent,
-    FooterComponent
   ],
   imports: [
     BrowserModule,

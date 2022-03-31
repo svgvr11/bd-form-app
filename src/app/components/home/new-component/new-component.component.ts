@@ -7,9 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewComponentComponent implements OnInit {
 
-  optionSelected: any = '';
-  optionPicked: string = '';
-
   exampleCompTitle: string = 'Ej: Monitor Asus VP228HE 21.5" negro';
   exampleCompProdName: string = 'Ej: VP228HE';
   exampleCompCod: string = 'Ej: 90LM01K0-B04110';
@@ -26,22 +23,22 @@ export class NewComponentComponent implements OnInit {
     { prod: 'Videojuegos' },
     { prod: 'Otro' },
   ];
+  typeSelected: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  capturar() {
-    // Pasamos el valor seleccionado a la variable verSeleccion
-    this.optionPicked = this.optionSelected;
-    console.log(this.optionPicked);
+  captureCompType(variable: any) {
+    // console.log(variable.target.value);
+    this.typeSelected = variable.target.value;
 }
 
   addComponent(newCompTitle: HTMLInputElement, newCompProdName: HTMLInputElement, newCompProdCode: HTMLInputElement, 
-               newCompType: HTMLSelectElement, newCompPower: HTMLInputElement, newCompBrand: HTMLInputElement, newCompImgUrl: HTMLInputElement) {
+               newCompPower: HTMLInputElement, newCompBrand: HTMLInputElement, newCompImgUrl: HTMLInputElement) {
 
-    console.log('anadiendo componentes: ', newCompTitle.value, ', ', newCompProdName.value, ', ', newCompProdCode.value, ', ', newCompType.value, ', ', newCompPower.value, ', ',
+    console.log('anadiendo componentes: ', newCompTitle.value, ', ', newCompProdName.value, ', ', newCompProdCode.value, ', ', this.typeSelected, ', ', newCompPower.value, ', ',
     newCompBrand.value, ', ', newCompImgUrl.value );
 
     return false;

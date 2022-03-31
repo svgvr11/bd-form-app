@@ -3,7 +3,7 @@
         <h2>Ingresar nuevo componente:</h2>
     </div>
 </div>
-<form (submit)="addComponent(newCompTitle, newCompProdName, newCompProdCode, newCompType, newCompPower, newCompBrand, newCompImgUrl)" class="row mt-3 needs-validation">
+<form (submit)="addComponent(newCompTitle, newCompProdName, newCompProdCode, newCompPower, newCompBrand, newCompImgUrl)" class="row mt-3 needs-validation">
     <!-- <div > -->
         <div class="col-md-6">
             <div class="d-flex flex-column w-100 input-group-sm mb-3">
@@ -27,9 +27,9 @@
             <div class="d-flex flex-column w-100">
                 <p class="mb-1">Tipo</p>
                 <select #newCompType class="form-select form-select-sm" id="floatingSelect"
-                    aria-label="Product type select dropdown" required (ngModel)="optionSelected" (change)="capturar()">
+                    aria-label="Product type select dropdown" required (change)="captureCompType($event)">
                     <option selected disabled>Selecciona una opción...</option>
-                    <option value="{{i + 1}}" *ngFor="let type of examplesCompTypes; let i = index">{{type.prod}}
+                    <option value="{{type.prod}}" *ngFor="let type of examplesCompTypes">{{type.prod}}
                     </option>
                 </select>
             </div>

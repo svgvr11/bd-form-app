@@ -41,7 +41,7 @@ export class NewComponentComponent implements OnInit {
   addComponent(newCompTitle: HTMLInputElement, newCompProdName: HTMLInputElement, newCompProdCode: HTMLInputElement, 
                newCompType: HTMLSelectElement, newCompPower: HTMLInputElement, newCompBrand: HTMLInputElement, newCompImgUrl: HTMLInputElement) {
 
-    console.log('anadiendo componentes: ', newCompTitle.value, ', ', newCompProdName.value, ', ', newCompProdCode.value, ', ', newCompType.innerHTML, ', ', newCompPower.value, ', ',
+    console.log('anadiendo componentes: ', newCompTitle.value, ', ', newCompProdName.value, ', ', newCompProdCode.value, ', ', newCompType.value, ', ', newCompPower.value, ', ',
     newCompBrand.value, ', ', newCompImgUrl.value );
 
     return false;

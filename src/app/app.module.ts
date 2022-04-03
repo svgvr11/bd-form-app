@@ -9,6 +9,8 @@ import { NewComponentComponent } from './components/home/new-component/new-compo
 import { SearchComponentComponent } from './components/home/search-component/search-component.component';
 import { AskAssistanceComponent } from './components/home/ask-assistance/ask-assistance.component';
 import { AddCompService } from './services/add-comp.service';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AddCompService } from './services/add-comp.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [
     AddCompService

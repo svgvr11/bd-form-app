@@ -6,6 +6,8 @@ import { NewComponentComponent } from './components/home/new-component/new-compo
 import { SearchComponentComponent } from './components/home/search-component/search-component.component';
 import { LoginComponent } from './components/login/login.component';
 
+import { AuthGuard } from './guards/auth.guard';
+
 const routes: Routes = [
   {
      path: '', 
@@ -19,6 +21,7 @@ const routes: Routes = [
   {
     path: 'home', 
     component: HomeComponent, 
+    canActivate: [AuthGuard],
     children: [
       { 
         path: '', 

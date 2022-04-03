@@ -31,13 +31,13 @@
                 <td>{{component.type}}</td>
                 <td>{{component.power}} W</td>
                 <td>{{component.brand}}</td>
-                <td> <a href="{{component.urlImage}}">IMG</a> </td>
+                <td> <a href="{{component.urlImage}}" target="_blank">IMG</a> </td>
                 <td>
-                    <button class="btn">
+                    <!-- <button class="btn">
                         <i class="bi bi-pencil"></i>
-                    </button>
+                    </button> -->
                     <button class="btn" (click)="deleteComponent(component)">
-                        <i class="bi bi-trash3"></i>
+                        <i class="bi bi-trash3 text-danger"></i>
                     </button>
                 </td>
               </tr>

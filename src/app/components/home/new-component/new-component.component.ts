@@ -8,6 +8,8 @@ import { AddCompService } from '../../../services/add-comp.service';
 })
 export class NewComponentComponent implements OnInit {
 
+  added: boolean = false;
+
   exampleCompTitle: string = 'Ej: Monitor Asus VP228HE 21.5" negro';
   exampleCompProdName: string = 'Ej: VP228HE';
   exampleCompCod: string = 'Ej: 90LM01K0-B04110';
@@ -63,6 +65,11 @@ export class NewComponentComponent implements OnInit {
     newCompImgUrl.value = '';
 
     newCompTitle.focus();
+    this.added = true;
+    setTimeout(() => {
+      this.added = false;
+    }, 3000);
+
     return false;
   }
 

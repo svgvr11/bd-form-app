@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,18 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  wrongPassAlert: boolean = false;
+
   user = {
     email: '',
     password: ''
   }
 
-  constructor() { }
+  constructor(
+    private authService: AuthService,
+    private route: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
   login() {
     console.log(this.user);
+    const { email, password } = this.user;
+    this.authService.login(email, password).then(res => {
+      console.log('Ingresaste correctamente', res);
+      if (res) {
+        this.route.navigate(['/home']);
+      } else {
+        console.log('Algo salio mal, intentalo nuevamente.')
+        this.wrongPassAlert = true;
+      }
+    })
   }
 
 }

@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyAphK-EiHnrPMiEuRhgy-mLMvlAIVATFP8",
+    authDomain: "kwh-calculator-d5d88.firebaseapp.com",
+    projectId: "kwh-calculator-d5d88",
+    storageBucket: "kwh-calculator-d5d88.appspot.com",
+    messagingSenderId: "260784973305",
+    appId: "1:260784973305:web:0657ac7bb4c73df9870928",
+    measurementId: "G-VZK03M4YNM"
+  }
 };
 
 /*

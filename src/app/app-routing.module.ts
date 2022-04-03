@@ -7,17 +7,19 @@ import { SearchComponentComponent } from './components/home/search-component/sea
 import { LoginComponent } from './components/login/login.component';
 
 import { AuthGuard } from './guards/auth.guard';
+import { LoggedGuard } from './guards/logged.guard';
 
 const routes: Routes = [
   {
      path: '', 
      pathMatch: 'full', 
+     canActivate: [LoggedGuard],
      component: LoginComponent 
   },
-  { 
-    path: 'login', 
-    component: LoginComponent 
-  },
+  // { 
+  //   path: 'login', 
+  //   component: LoginComponent 
+  // },
   {
     path: 'home', 
     component: HomeComponent, 

@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
   login() {
     console.log(this.user);
     const { email, password } = this.user;
+    // To add a new user just change '.login()' to '.register()'
     this.authService.login(email, password).then(res => {
       console.log('Ingresaste correctamente', res);
       if (res) {

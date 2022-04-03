@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NewComponentComponent } from './components/home/new-component/new-component.component';
 import { SearchComponentComponent } from './components/home/search-component/search-component.component';
 import { AskAssistanceComponent } from './components/home/ask-assistance/ask-assistance.component';
+import { AddCompService } from './services/add-comp.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { AskAssistanceComponent } from './components/home/ask-assistance/ask-ass
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AddCompService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

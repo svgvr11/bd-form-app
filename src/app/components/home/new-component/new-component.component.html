@@ -39,7 +39,7 @@
 
             <div class="d-flex flex-column w-100 input-group-sm mb-3">
                 <p class="mb-1">Consumo (W)</p>
-                <input #newCompPower type="text" class="form-control" placeholder="{{examplePower}}" aria-label="Power input"
+                <input #newCompPower type="number" class="form-control" placeholder="{{examplePower}}" aria-label="Power input"
                     aria-describedby="inputGroup-sizing-sm" required>
             </div>
 
@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="col-md-12 d-flex justify-content-end gap-3 vw-100">
-            <button class="btn btn-secondary disabled">Limpiar campos</button>
+            <button class="btn btn-secondary" (click)="cleanFields(newCompTitle, newCompProdName, newCompProdCode, newCompPower, newCompBrand, newCompImgUrl)">Limpiar campos</button>
             <button class="btn btn-secondary" type="submit">Guardar</button>
         </div>
     <!-- </div> -->

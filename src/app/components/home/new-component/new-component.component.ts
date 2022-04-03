@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddCompService } from '../../../services/add-comp.service';
 
 @Component({
   selector: 'app-new-component',
@@ -25,7 +26,9 @@ export class NewComponentComponent implements OnInit {
   ];
   typeSelected: string = '';
 
-  constructor() { }
+  constructor(
+    public addCompService: AddCompService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -38,10 +41,41 @@ export class NewComponentComponent implements OnInit {
   addComponent(newCompTitle: HTMLInputElement, newCompProdName: HTMLInputElement, newCompProdCode: HTMLInputElement, 
                newCompPower: HTMLInputElement, newCompBrand: HTMLInputElement, newCompImgUrl: HTMLInputElement) {
 
-    console.log('anadiendo componentes: ', newCompTitle.value, ', ', newCompProdName.value, ', ', newCompProdCode.value, ', ', this.typeSelected, ', ', newCompPower.value, ', ',
-    newCompBrand.value, ', ', newCompImgUrl.value );
+    // console.log('anadiendo componentes: ', newCompTitle.value, ', ', newCompProdName.value, ', ', newCompProdCode.value, ', ', this.typeSelected, ', ', newCompPower.value, ', ',
+    // newCompBrand.value, ', ', newCompImgUrl.value );
 
+    this.addCompService.addComponent({
+      title: newCompTitle.value,
+      nameProduct: newCompProdName.value,
+      code: newCompProdCode.value,
+      type: this.typeSelected,
+      power: Number(newCompPower.value),
+      brand: newCompBrand.value,
+      urlImage: newCompImgUrl.value
+    });
+
+    newCompTitle.value = '';
+    newCompProdName.value = '';
+    newCompProdCode.value = '';
+    this.typeSelected = '';
+    newCompPower.value = '';
+    newCompBrand.value = '';
+    newCompImgUrl.value = '';
+
+    newCompTitle.focus();
     return false;
   }
+
+  cleanFields(newCompTitle: HTMLInputElement, newCompProdName: HTMLInputElement, newCompProdCode: HTMLInputElement, 
+    newCompPower: HTMLInputElement, newCompBrand: HTMLInputElement, newCompImgUrl: HTMLInputElement) {
+    newCompTitle.value = '';
+    newCompProdName.value = '';
+    newCompProdCode.value = '';
+    newCompPower.value = '';
+    newCompBrand.value = '';
+    newCompImgUrl.value = '';
+  }
+
+
 
 }

@@ -34,6 +34,8 @@ export class LoginComponent implements OnInit {
         this.route.navigate(['/home']);
       } else {
         console.log('Algo salio mal, intentalo nuevamente.')
+        this.user.email = '';
+        this.user.password = '';
         this.wrongPassAlert = true;
       }
     })

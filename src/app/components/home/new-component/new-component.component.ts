@@ -28,6 +28,8 @@ export class NewComponentComponent implements OnInit {
   ];
   typeSelected: string = '';
 
+  popoverContent: string = 'Ejemplos: 13,5 -> 14 | 13,4 -> 13';
+
   constructor(
     public addCompService: AddCompService
   ) { }
@@ -70,17 +72,17 @@ export class NewComponentComponent implements OnInit {
       this.added = false;
     }, 3000);
 
-    return false;
   }
-
+  
   cleanFields(newCompTitle: HTMLInputElement, newCompProdName: HTMLInputElement, newCompProdCode: HTMLInputElement, 
     newCompPower: HTMLInputElement, newCompBrand: HTMLInputElement, newCompImgUrl: HTMLInputElement) {
-    newCompTitle.value = '';
-    newCompProdName.value = '';
-    newCompProdCode.value = '';
-    newCompPower.value = '';
-    newCompBrand.value = '';
-    newCompImgUrl.value = '';
+      newCompTitle.value = '';
+      newCompProdName.value = '';
+      newCompProdCode.value = '';
+      newCompPower.value = '';
+      newCompBrand.value = '';
+      newCompImgUrl.value = '';
+      return false;
   }
 
 

@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     FormsModule,
     NgbModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    NgxSkeletonLoaderModule
   ],
   providers: [
     AddCompService

@@ -3,7 +3,24 @@
         <h2>Ingresar nuevo componente:</h2>
     </div>
 </div>
-<div class="row">
+<div class="row" *ngIf="!contentLoaded">
+    <div class="col-md-12">
+        <ngx-skeleton-loader count="1" appearance="line" animation="pulse"></ngx-skeleton-loader>
+        <ngx-skeleton-loader count="1" appearance="line" animation="pulse"></ngx-skeleton-loader>
+    </div>
+    <div class="col-md-12">
+        <ngx-skeleton-loader count="1" appearance="line" animation="pulse"></ngx-skeleton-loader>
+        <ngx-skeleton-loader count="1" appearance="line" animation="pulse"></ngx-skeleton-loader>
+    </div>
+    <div class="col-md-12">
+        <ngx-skeleton-loader count="1" appearance="line" animation="pulse"></ngx-skeleton-loader>
+        <ngx-skeleton-loader count="1" appearance="line" animation="pulse"></ngx-skeleton-loader>
+    </div>
+    <div class="col-md-6">
+        <ngx-skeleton-loader count="1" appearance="line" animation="pulse"></ngx-skeleton-loader>
+    </div>
+</div>
+<div class="row" *ngIf="contentLoaded">
     <form (submit)="addComponent(newCompTitle, newCompProdName, newCompProdCode, newCompPower, newCompBrand, newCompImgUrl)" class="row mt-3 needs-validation">
 
         <div class="col-md-12 d-flex gap-2">

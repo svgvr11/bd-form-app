@@ -10,6 +10,8 @@ import { Components } from '../../../models/Components';
 })
 export class SearchComponentComponent implements OnInit {
 
+  contentLoaded: boolean = false;
+
   componentList: Components[] = [];
 
 
@@ -19,6 +21,9 @@ export class SearchComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.componentList = this.addCompService.getComponents();
+    setTimeout(() => {
+      this.contentLoaded = true;
+    }, 2000);
   }
 
   deleteComponent(component: Components) {

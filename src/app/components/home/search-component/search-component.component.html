@@ -23,7 +23,7 @@
                 <th scope="col">Acciones</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody *ngIf="contentLoaded">
               <tr *ngFor="let component of componentList">
                 <th>{{component.title}}</th>
                 <td>{{component.nameProduct}}</td>
@@ -43,5 +43,8 @@
               </tr>
             </tbody>
           </table>
+          <div *ngIf="!contentLoaded">
+            <ngx-skeleton-loader count="8" appearance="line" animation="pulse"></ngx-skeleton-loader>
+        </div>
     </div>
 </div>

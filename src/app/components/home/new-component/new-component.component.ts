@@ -8,6 +8,10 @@ import { AddCompService } from '../../../services/add-comp.service';
 })
 export class NewComponentComponent implements OnInit {
 
+  contentLoaded: boolean = false;
+
+  widthProgress = 1;
+
   added: boolean = false;
 
   exampleCompTitle: string = 'Ej: Monitor Asus VP228HE 21.5" negro';
@@ -35,6 +39,9 @@ export class NewComponentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.contentLoaded = true;
+    }, 1500);
   }
 
   captureCompType(variable: any) {

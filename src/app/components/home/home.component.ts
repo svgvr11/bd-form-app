@@ -10,12 +10,15 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HomeComponent implements OnInit {
 
+  userLogged: string = "";
+
   constructor(
     private authService: AuthService,
     private route: Router,
   ) { }
 
   ngOnInit(): void {
+   this.userLogged = JSON.parse(localStorage.getItem('userLogged') || '{}');
   }
 
   logout() {

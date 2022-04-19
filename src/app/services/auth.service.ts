@@ -34,6 +34,7 @@ export class AuthService {
     }
 
     logout() {
+      localStorage.setItem('userLogged', JSON.stringify(''));
       this.afauth.signOut();
     }
 }
